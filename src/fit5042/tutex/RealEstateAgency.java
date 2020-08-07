@@ -53,6 +53,7 @@ public class RealEstateAgency {
     	Scanner sc = new Scanner(System.in);
         System.out.print("Enter the property ID you want to search: ");
         String id = sc.nextLine();
+        sc.close();
         try {
         	Property property = propertyRepository.searchPropertyById(Integer.parseInt(id));
         	if (property != null) System.out.println(property.toString());
